@@ -36,6 +36,7 @@ public class BaseClass {
             options.addArguments("--disable-gpu");
 
             driver = new ChromeDriver(options);
+            driver.get("http://jupiter.cloud.planittesting.com");
         }
         else {
             //Open Chrome Browser
