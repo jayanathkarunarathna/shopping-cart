@@ -18,6 +18,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Install Google Chrome
+        run: |
+            sudo apt-get update
+            sudo apt-get install -y google-chrome-stable
+
       - name: Cache Maven dependencies
         uses: actions/cache@v3
         with:
