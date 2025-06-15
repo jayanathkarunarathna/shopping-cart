@@ -25,10 +25,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
-      - - name: Install ChromeDriver
-          uses: nanasess/setup-chromedriver@v2
-          with:
-            chromedriver-version: latest
+      - name: Install ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+        with:
+          chromedriver-version: latest
 
       - name: Run Maven tests
         run: mvn clean test
