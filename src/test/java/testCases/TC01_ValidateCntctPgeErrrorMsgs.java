@@ -56,13 +56,13 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
         cp.setMessage(message);
 
         //Validate 'Top banner' error message is disappeared
-        Assert.assertEquals(cp.errorTobBannerExist(), 0, "Top banner error message is still exist.");
+        Assert.assertEquals(cp.errorTobBannerExist(), true, "Top banner error message is still exist.");
         //Validate 'ForeName' error message is disappeared
-        Assert.assertEquals(cp.errorForeNameExist(), 0, "Forename error message is still exist.");
+        Assert.assertEquals(cp.errorForeNameExist(), true, "Forename error message is still exist.");
         //Validate 'Email' error message is disappeared
-        Assert.assertEquals(cp.errorEmailExist(), 0, "Email error message is still exist.");
+        Assert.assertEquals(cp.errorEmailExist(), true, "Email error message is still exist.");
         //Validate error message of the 'Message' field is disappeared
-        Assert.assertEquals(cp.errorMessageExist(), 0, "Message error message is still exist.");
+        Assert.assertEquals(cp.errorMessageExist(), true, "Message error message is still exist.");
 
         } catch (Exception e) {
             logger.error("test is failed.." + '\n' + e);

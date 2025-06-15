@@ -4,6 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class ContactPage extends BasePage {
 
@@ -101,21 +105,25 @@ public class ContactPage extends BasePage {
     }
 
     //Capture the size of the error message elements
-    public int errorTobBannerExist(){
-        int errorMsgSize = driver.findElements(By.cssSelector(".alert.alert-error.ng-scope")).size();
-        return errorMsgSize;
+    public boolean errorTobBannerExist(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        boolean isGone = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".alert.alert-error.ng-scope")));
+        return isGone;
     }
-    public int errorForeNameExist(){
-        int errorMsgSize = driver.findElements(By.id("forename-err")).size();
-        return errorMsgSize;
+    public boolean errorForeNameExist(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        boolean isGone = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("forename-err")));
+        return isGone;
     }
-    public int errorEmailExist(){
-        int errorMsgSize = driver.findElements(By.id("email-err")).size();
-        return errorMsgSize;
+    public boolean errorEmailExist(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        boolean isGone = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("email-err")));
+        return isGone;
     }
-    public int errorMessageExist(){
-        int errorMsgSize = driver.findElements(By.id("message-err")).size();
-        return errorMsgSize;
+    public boolean errorMessageExist(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        boolean isGone = wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("message-err")));
+        return isGone;
     }
 
     //Insert values to the text fields
