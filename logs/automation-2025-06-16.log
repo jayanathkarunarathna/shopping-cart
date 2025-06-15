@@ -1,0 +1,62 @@
+23:30:32.137 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:30:32.529 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:30:32.531 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:30:32.818 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:30:32.819 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:30:32.996 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:30:33.040 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+23:30:33.414 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+23:30:56.834 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+23:31:00.380 [main] INFO  testCases.TC01_ValidateCntctPgeErrrorMsgs - *** Starting validateErrorMessages ***
+23:31:00.875 [main] INFO  testCases.TC01_ValidateCntctPgeErrrorMsgs - *** Finished validateErrorMessages ***
+23:31:01.359 [main] INFO  testCases.TC01_ValidateCntctPgeErrrorMsgs - *** Starting validateNoErrorsWithValidInput ***
+23:31:41.905 [main] INFO  testCases.TC01_ValidateCntctPgeErrrorMsgs - *** Finished validateNoErrorsWithValidInput ***
+23:32:22.805 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+23:32:30.144 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:32:31.101 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:32:31.105 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:32:31.771 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:32:31.774 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+23:32:32.276 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+23:32:32.401 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+23:32:33.081 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+00:55:02.922 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+00:55:08.793 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+00:55:09.631 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+00:55:09.671 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+00:55:10.063 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+00:55:39.457 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+00:55:46.364 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+00:55:47.868 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+00:55:47.975 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+00:55:48.457 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+00:56:35.500 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+00:56:40.071 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+00:56:40.851 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+00:56:40.908 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+00:56:41.313 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+00:57:34.116 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+00:57:39.644 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+00:57:40.649 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+00:57:40.709 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting verifyCartCalculations ***
+00:57:41.445 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished verifyCartCalculations ***
+00:58:03.163 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
+00:58:09.228 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Starting orderProducts ***
+01:00:01.030 [main] INFO  testCases.TC03_ValidateShoppingCart - *** Finished orderProducts ***
+01:00:07.087 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\Harshana Perera\AppData\Local\JetBrains\IdeaIC2022.2\temp-testng-customsuite.xml
+
