@@ -1,36 +1,50 @@
 package testBase;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import utilities.ExcelReader;
 
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.Duration;
-
 
 public class BaseClass {
 
-    public WebDriver driver;
+    public ChromeDriver driver;
     public Logger logger;
 
     @BeforeClass
-    public void setup(){
+    public void setup() throws Exception {
 
-        //Loading log4j file
+        // Loading log4j logger
         logger = LogManager.getLogger(this.getClass());
 
-        //Open Chrome Browser
-        driver = new ChromeDriver();
+        // Prepare ChromeOptions
+        ChromeOptions options = new ChromeOptions();
+
+        // Detect if running on GitHub Actions (or any CI)
+        String githubAction = System.getenv("GITHUB_ACTIONS");
+        if ("true".equals(githubAction)) {
+            options.addArguments("--headless=new");    // Headless mode in CI
+            options.addArguments("--no-sandbox");      // Required for many CI environments
+            options.addArguments("--disable-dev-shm-usage"); // Avoid shared memory issues
+
+            // Create a unique temp user-data-dir to avoid conflicts
+            Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
+            options.addArguments("--user-data-dir=" + tempUserDataDir.toAbsolutePath());
+        }
+
+        // Initialize ChromeDriver with options
+        driver = new ChromeDriver(options);
+
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("http://jupiter.cloud.planittesting.com");
         driver.manage().window().maximize();
-
     }
 
     @AfterClass
