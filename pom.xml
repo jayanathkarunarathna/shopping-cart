@@ -30,7 +30,7 @@
                     <version>3.5.0</version>
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>master.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/java/utilities/master.xml</suiteXmlFile>
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
@@ -108,7 +108,5 @@
             <version>7.11.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
 </project>

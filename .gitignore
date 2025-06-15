@@ -1,0 +1,18 @@
+# Maven
+/target/
+*.log
+*.class
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and reports
+*.html
+*.log
