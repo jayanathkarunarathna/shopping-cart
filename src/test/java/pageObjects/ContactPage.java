@@ -70,6 +70,8 @@ public class ContactPage extends BasePage {
 
     //Click 'Contact' link
     public void clickContactLnk() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement contactLnk = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("a[href='#/contact']")));
         contactLnk.click();
     }
 
