@@ -11,7 +11,8 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
 
     @DataProvider(name = "contactData")
     public Object[][] contactData() throws Exception {
-        ExcelReader reader = new ExcelReader("testData/TestData.xlsx");
+        String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
+        ExcelReader reader = new ExcelReader(path);
         var result = reader.getContactFormData("ContactFormData", false).stream().map(r -> new Object[]{r[0], r[1], r[2], r[3], r[4]}).toArray(Object[][]::new);
         return result;
     }
