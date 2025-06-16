@@ -14,7 +14,8 @@ public class TC03_ValidateShoppingCart extends BaseClass {
     @DataProvider(name = "orderData")
     public Object[][] orderData() throws Exception {
         // Read the data for the Order data from the Excel file.
-        ExcelReader reader = new ExcelReader("testdata/testdata.xlsx");
+        String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
+        ExcelReader reader = new ExcelReader(path);
         List<String[]> rawData = reader.getContactFormData("OrderData", true).stream().skip(1).toList();
         return new Object[][]{{rawData}};
     }
@@ -50,7 +51,8 @@ public class TC03_ValidateShoppingCart extends BaseClass {
     @DataProvider(name = "cartData")
     public Object[][] cartData() throws Exception {
         // Read the data for the Cart data from the Excel file.
-        ExcelReader reader = new ExcelReader("testdata/testdata.xlsx");
+        String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
+        ExcelReader reader = new ExcelReader(path);
         List<String[]> rawData = reader.getContactFormData("CartData", true).stream().skip(1).toList();
         return new Object[][]{{rawData}};
     }

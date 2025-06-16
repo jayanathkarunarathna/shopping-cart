@@ -17,7 +17,8 @@ public class TC02_SubmitContactForm extends BaseClass {
 
     @DataProvider(name = "contactData")
     public Object[][] contactData() throws Exception {
-        ExcelReader reader = new ExcelReader("testdata/testdata.xlsx");
+        String path = System.getProperty("user.dir") + "/testData/TestData.xlsx";
+        ExcelReader reader = new ExcelReader(path);
         var result = reader.getContactFormData("ContactFormData", true).stream().skip(1).map(r -> new Object[]{r[0], r[1], r[2], r[3], r[4]}).toArray(Object[][]::new);
         return result;
     }
