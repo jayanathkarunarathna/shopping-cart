@@ -53,6 +53,29 @@ public class ExtentReportManager implements ITestListener {
         test.log(Status.FAIL, "Test case FAILED is:" + result.getName());
         test.log(Status.FAIL, "Test Case FAILED cause is: " + result.getThrowable());
 
+        if (result.getThrowable() != null) {
+            try {
+                // Get the WebDriver instance (assuming it's accessible)
+                WebDriver driver = (WebDriver) result.getTestContext().getAttribute("driver");
+                if (driver != null) {
+                    // Generate a unique file name for the screenshot
+                    String screenshotName = result.getName();
+                    String screenshotPath = "screenshots/" + screenshotName + ".png";
+
+                    // Capture screenshot
+                    TakesScreenshot ts = (TakesScreenshot) driver;
+                    File source = ts.getScreenshotAs(OutputType.FILE);
+                    File destination = new File(screenshotPath);
+                    FileUtils.copyFile(source, destination);
+
+                    // Add the screenshot to the Extent report
+                    test.addScreenCaptureFromPath(screenshotPath, "Failure Screenshot");
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public void onTestSkipped(ITestResult result) {
