@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -28,6 +29,7 @@ public class BaseClass {
         // Detect if running on GitHub Actions (or any CI)
         String githubAction = System.getenv("GITHUB_ACTIONS");
         if ("true".equals(githubAction)) {
+            Assert.fail("Git hub action is true.");
             options.addArguments("--headless=new"); // Required for Chrome 109+
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
@@ -37,6 +39,7 @@ public class BaseClass {
             // Create a unique temp user-data-dir to avoid conflicts
             Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
             options.addArguments("--user-data-dir=" + tempUserDataDir.toAbsolutePath());
+
         }
 
         // Initialize ChromeDriver with options
