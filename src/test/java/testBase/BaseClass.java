@@ -36,8 +36,8 @@ public class BaseClass {
 //            options.addArguments("--window-size=1920,1080"); // Ensure element is on screen
 //
 //            // Create a unique temp user-data-dir to avoid conflicts
-//            Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
-//            options.addArguments("--user-data-dir=" + tempUserDataDir.toAbsolutePath());
+           Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
+           options.addArguments("--user-data-dir=" + tempUserDataDir.toAbsolutePath());
 //
 //        }
 
