@@ -21,7 +21,7 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
     public void validateErrorMessages() {
         logger.info("*** Starting validateErrorMessages ***");
 
-        try {
+ //       try {
             ContactPage cp = new ContactPage(driver);
             cp.clickContactLnk();
             cp.clickSubmitBtn();
@@ -35,10 +35,10 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
             //Validate error message for 'Message' field is displayed
             Assert.assertTrue(cp.isMessageErrMsgDisplayed());
 
-        } catch (Exception e) {
-            logger.error("test is failed.." + '\n' + e);
-            Assert.fail();
-        }
+//        } catch (Exception e) {
+//            logger.error("test is failed.." + '\n' + e);
+//            Assert.fail();
+//        }
 
         logger.info("*** Finished validateErrorMessages ***");
     }
@@ -47,7 +47,7 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
     public void validateNoErrorsWithValidInputs(String foreName, String surName, String email, String telephone, String message) {
         logger.info("*** Starting validateNoErrorsWithValidInput ***");
 
-        try {
+//        try {
         ContactPage cp = new ContactPage(driver);
         //Enter values to the text fields
         cp.setForename(foreName);
@@ -65,10 +65,10 @@ public class TC01_ValidateCntctPgeErrrorMsgs extends BaseClass {
         //Validate error message of the 'Message' field is disappeared
         Assert.assertEquals(cp.errorMessageExist(), true, "Message error message is still exist.");
 
-        } catch (Exception e) {
-            logger.error("test is failed.." + '\n' + e);
-            Assert.fail();
-        }
+//        } catch (Exception e) {
+//            logger.error("test is failed.." + '\n' + e);
+//            Assert.fail();
+//        }
         logger.info("*** Finished validateNoErrorsWithValidInput ***");
     }
 }

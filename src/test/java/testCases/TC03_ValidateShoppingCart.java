@@ -24,7 +24,7 @@ public class TC03_ValidateShoppingCart extends BaseClass {
     public void orderProducts(List<String[]> orderItems) {
         logger.info("*** Starting orderProducts ***");
 
-        try {
+ //       try {
             ShopPage sp = new ShopPage(driver);
             sp.clickShopLink();
             int quantitySum = 0;
@@ -39,11 +39,11 @@ public class TC03_ValidateShoppingCart extends BaseClass {
             //Validate 'Cart Count'
             Assert.assertEquals(sp.getCartCount(), quantitySum, "Cart count is incorrect.");
 
-        }
-        catch (Exception e) {
-            logger.error("test is failed.." + '\n' + e);
-            Assert.fail();
-        }
+//        }
+//        catch (Exception e) {
+//            logger.error("test is failed.." + '\n' + e);
+//            Assert.fail();
+//        }
 
         logger.info("*** Finished orderProducts ***");
     }
@@ -61,7 +61,7 @@ public class TC03_ValidateShoppingCart extends BaseClass {
     public void verifyCartCalculations(List<String[]> cartItems) {
         logger.info("*** Starting verifyCartCalculations ***");
 
-        try {
+ //       try {
         CartPage cartPage = new CartPage(driver);
         cartPage.clickCartLink();
         double expectedTotal = 0.0;
@@ -85,10 +85,10 @@ public class TC03_ValidateShoppingCart extends BaseClass {
         //Verify the 'Total' amount.
         Assert.assertEquals(actualTotal, expectedTotal, "Total is incorrect between actual and expected totals.");
 
-        } catch (Exception e) {
-            logger.error("test is failed.." + '\n' + e);
-            Assert.fail();
-        }
+//        } catch (Exception e) {
+//            logger.error("test is failed.." + '\n' + e);
+//            Assert.fail();
+//        }
 
         logger.info("*** Finished verifyCartCalculations ***");
     }

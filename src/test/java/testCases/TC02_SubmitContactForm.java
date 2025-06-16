@@ -27,7 +27,7 @@ public class TC02_SubmitContactForm extends BaseClass {
 
         logger.info("*** Starting successfulSubmission ***");
 
-        try {
+//        try {
         ContactPage cp = new ContactPage(driver);
         cp.clickContactLnk();
         //Enter values to the text fields
@@ -49,10 +49,10 @@ public class TC02_SubmitContactForm extends BaseClass {
 
         cp.clickBackBtn();
 
-        } catch (Exception e) {
-            logger.error("test is failed.." + '\n' + e);
-            Assert.fail();
-        }
+//        } catch (Exception e) {
+//            logger.error("test is failed.." + '\n' + e);
+//            Assert.fail();
+//        }
 
         logger.info("*** Finished successfulSubmission ***");
     }
