@@ -32,7 +32,7 @@ public class BaseClass {
             options.addArguments("--headless=new"); // Required for Chrome 109+
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            options.addArguments("--disable-gpu");
+            // options.addArguments("--disable-gpu");
             options.addArguments("--window-size=1920,1080"); // Ensure element is on screen
 
             // Create a unique temp user-data-dir to avoid conflicts

@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - jayanath
   pull_request:
     branches:
       - main
