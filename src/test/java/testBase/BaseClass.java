@@ -28,10 +28,11 @@ public class BaseClass {
         // Detect if running on GitHub Actions (or any CI)
         String githubAction = System.getenv("GITHUB_ACTIONS");
         if ("true".equals(githubAction)) {
-            options.addArguments("--headless=new");    // Headless mode in CI
-            options.addArguments("--no-sandbox");      // Required for many CI environments
-            options.addArguments("--disable-dev-shm-usage"); // Avoid shared memory issues
-            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--headless=new"); // Required for Chrome 109+
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080"); // Ensure element is on screen
 
             // Create a unique temp user-data-dir to avoid conflicts
             Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
