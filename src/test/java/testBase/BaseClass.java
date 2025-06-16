@@ -31,6 +31,7 @@ public class BaseClass {
             options.addArguments("--headless=new");    // Headless mode in CI
             options.addArguments("--no-sandbox");      // Required for many CI environments
             options.addArguments("--disable-dev-shm-usage"); // Avoid shared memory issues
+            options.addArguments("--window-size=1920,1080");
 
             // Create a unique temp user-data-dir to avoid conflicts
             Path tempUserDataDir = Files.createTempDirectory("chrome-user-data");
